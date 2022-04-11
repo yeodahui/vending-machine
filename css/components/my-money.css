@@ -1,0 +1,26 @@
+.my-page .my-money {
+  background-color: #fff;
+  padding: 1px;
+}
+
+.my-page .my-money .purple-container {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  margin: 9px auto;
+  padding: 6px 10px;
+  width: 306px;
+  border: 0;
+}
+
+.my-money .purple-container h3 {
+  font-weight: normal;
+}
+
+.my-money .purple-container h3::after {
+  content: " :";
+}
+
+.my-money .purple-container .money {
+  font-weight: bold;
+}
