@@ -1,0 +1,48 @@
+.vending-machine {
+  padding: 31px 27px 27px 28px;
+}
+
+.vending-machine .drinks-list {
+}
+
+.vending-machine .drink-list li {
+  margin-bottom: 12px;
+  padding: 11px 11px 9px 13px;
+  width: 94px;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: white;
+  float: left;
+  text-align: center;
+}
+
+.vending-machine .drink-list li:nth-child(3n + 2) {
+  margin: 0 11px 12px 11px;
+}
+
+.vending-machine .drink-list li.selected {
+  outline: solid 3px #6327fe;
+}
+
+.vending-machine .drink-list li.sold-out::after {
+  /* 품절 */
+}
+
+.vending-machine .drink-list li .img-cola {
+  width: 36px;
+  height: 65px;
+}
+
+.vending-machine .drink-list li .name {
+  font-size: 9px;
+  margin-bottom: 7px;
+}
+
+.vending-machine .drink-list li button {
+  padding: 5px;
+  width: 100%;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #6327fe;
+}

@@ -5,7 +5,6 @@
 
 .wrapper {
   margin: 60px auto;
-  /* display: flex; */
   gap: 18px;
   justify-content: center;
 }
