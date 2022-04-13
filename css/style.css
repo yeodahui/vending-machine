@@ -2,6 +2,7 @@
 @import "../css/components/my-money.css";
 @import "../css/components/my-drinks.css";
 @import "../css/components/vending-machine.css";
+@import "../css/components/drink-list.css";
 @import "../css/screens/pc.css";
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
@@ -61,10 +62,25 @@ body {
   width: 360px;
 }
 
-.purple-container {
+.container-money {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  border: 1px solid #bdbdbd;
+  padding: 6px 10px;
+  width: 100%;
+  border: 0;
   border-radius: 5px;
   background-color: #eae8fe;
+}
+
+.container-money h3 {
+  font-weight: normal;
+}
+
+.container-money h3::after {
+  content: " :";
+}
+
+.container-money .money-amount {
+  font-weight: bold;
 }

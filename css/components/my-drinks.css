@@ -9,53 +9,10 @@
   font-weight: 700;
 }
 
-.my-drink .purple-container {
-  /* display: flex; */
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+.my-drink .drink-list.mine {
   margin: 13px auto 6px auto;
-  padding: 12px 18px 12px 12px;
   width: 306px;
   height: 364px;
-}
-
-.my-drink .my-drink-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-  padding: 8px;
-  width: 276px;
-  height: 46px;
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.my-drink .my-drink-list li:last-of-type {
-  margin-bottom: 0;
-}
-
-.my-drink .my-drink-list li img {
-  width: 18px;
-  height: 33px;
-  margin-right: 10px;
-}
-
-.my-drink .my-drink-list li .drink-name {
-  width: 73px;
-  overflow: visible;
-  margin-right: 127px;
-  font-size: 9px;
-}
-
-.my-drink .my-drink-list li .count {
-  display: inline-block;
-  width: 30px;
-  border: 1px solid #bdbdbd;
-  border-radius: 5px;
-  padding: 4px;
-  text-align: center;
 }
 
 .my-drink .total-amount {

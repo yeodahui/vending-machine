@@ -2,47 +2,57 @@
   padding: 31px 27px 27px 28px;
 }
 
-.vending-machine .drinks-list {
+/* 판매 음료 리스트 시작 */
+.vending-machine .list-on-sale {
+  display: grid;
+  grid-template-columns: 94px 94px 94px;
+  grid-auto-rows: 130px;
+  gap: 12px;
 }
 
-.vending-machine .drink-list li {
-  margin-bottom: 12px;
-  padding: 11px 11px 9px 13px;
-  width: 94px;
+.vending-machine .list-on-sale li {
+  padding: 10px 11px 9px 13px;
   border-radius: 10px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
   background-color: white;
-  float: left;
   text-align: center;
 }
 
-.vending-machine .drink-list li:nth-child(3n + 2) {
-  margin: 0 11px 12px 11px;
-}
-
-.vending-machine .drink-list li.selected {
+.vending-machine .list-on-sale li.selected {
   outline: solid 3px #6327fe;
 }
 
-.vending-machine .drink-list li.sold-out::after {
+.vending-machine .list-on-sale li.sold-out::after {
   /* 품절 */
 }
 
-.vending-machine .drink-list li .img-cola {
+.vending-machine .list-on-sale li .img-cola {
   width: 36px;
   height: 65px;
 }
 
-.vending-machine .drink-list li .name {
+.vending-machine .list-on-sale li .name {
   font-size: 9px;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
-.vending-machine .drink-list li button {
-  padding: 5px;
+.vending-machine .list-on-sale li button {
   width: 100%;
   border: 0;
   border-radius: 50px;
   color: #fff;
   background-color: #6327fe;
+  font-size: 12px;
+  line-height: 22px;
 }
+/* 판매 음료 리스트 끝 */
+
+/* 자판기 컨트롤 시작 */
+.vending-machine .machine-controls {
+  display: grid;
+  grid-template-columns: 200px 94px;
+  grid-template-rows: 32px 32px 106px;
+  gap: 11px;
+  margin-top: 20px;
+}
+/* 자판기 컨트롤 끝 */
