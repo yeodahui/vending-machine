@@ -7,3 +7,7 @@
   width: 306px;
   margin: 9px auto;
 }
+
+.my-money .container-money .money-amount {
+  font-weight: bold;
+}

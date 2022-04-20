@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 12px 18px 12px 12px;
-  overflow: hidden;
+  padding: 12px 4px 12px 12px;
+  overflow-y: scroll;
   border: 1px solid #bdbdbd;
   border-radius: 5px;
   background-color: #eae8fe;
@@ -38,7 +38,6 @@
 
 .drink-list li .count {
   float: right;
-  display: inline-block;
   width: 30px;
   border: 1px solid #bdbdbd;
   border-radius: 5px;
@@ -48,4 +47,20 @@
 
 .total-amount {
   text-align: end;
+}
+
+.drink-list::-webkit-scrollbar {
+  width: 12px;
+}
+.drink-list::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 15px;
+  border-width: 4px;
+  border-color: transparent;
+}
+.drink-list::-webkit-scrollbar-track {
+  background-color: transparent;
+  box-shadow: transparent 0 0 0 inset;
+  border: 0;
 }
