@@ -1,0 +1,119 @@
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* settings */
+html {
+  font-size: 10px;
+}
+
+.txt-ir {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.txt-hidden {
+  // 웹표준 지키는 용도의 텍스트만 입력
+}
+
+/* components */
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.cont-money {
+  background-color: #eae8fe;
+  padding: 6px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-drinks {
+  background-color: #eae8fe;
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  overflow-y: scroll;
+}
+
+/* design */
+body {
+  background-color: #eae8fe;
+  font-size: 1.4rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 67px;
+}
+
+.machine,
+.myPage {
+  width: 360px;
+}
+
+// 자판기
+.machine {
+  background-color: #fff;
+}
+
+// 마이페이지
+.myPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// 소지금
+.myMoney {
+  background-color: #fff;
+  padding: 9px 27px;
+}
+
+// 획득한 음료
+.myDrinks {
+  background-color: #fff;
+  padding: 25px 27px;
+}
+
+.list-myDrinks {
+  height: 364px;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    max-width: 360px;
+    background-color: #fff;
+    flex-direction: column;
+  }
+  .header h1 {
+    margin-bottom: 18px;
+  }
+  .logo {
+    width: 166px;
+  }
+}

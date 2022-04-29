@@ -1,0 +1,128 @@
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* settings */
+html {
+  font-size: 10px;
+}
+
+.txt-ir {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* components */
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 18px;
+}
+
+.cont-money {
+  background-color: #eae8fe;
+  padding: 6px 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list-drinks {
+  background-color: #eae8fe;
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  overflow-y: scroll;
+}
+
+/* design */
+body {
+  background-color: #eae8fe;
+  font-size: 1.4rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 67px;
+}
+
+.machine,
+.myPage {
+  width: 360px;
+}
+
+.machine {
+  background-color: #fff;
+}
+
+.myPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.myMoney {
+  background-color: #fff;
+  padding: 9px 27px;
+}
+
+.myDrinks {
+  background-color: #fff;
+  padding: 25px 27px;
+}
+
+.list-myDrinks {
+  height: 364px;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    max-width: 360px;
+    background-color: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header h1 {
+    margin-bottom: 18px;
+  }
+  .logo {
+    width: 166px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
