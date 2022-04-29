@@ -5,10 +5,18 @@ h2,
 h3,
 h4,
 ul,
-li {
+li,
+button,
+p,
+a {
   margin: 0;
   padding: 0;
   font-size: inherit;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
 }
 
 ul {
@@ -16,6 +24,10 @@ ul {
 }
 
 /* settings */
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
 }
@@ -35,7 +47,7 @@ html {
 
 /* components */
 .wrapper {
-  width: 960px;
+  width: 768px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -76,12 +88,69 @@ body {
   width: 360px;
 }
 
-// 자판기
+/* 자판기 시작 */
 .machine {
   background-color: #fff;
+  padding: 31px 27px 28px;
+  box-sizing: border-box;
 }
 
-// 마이페이지
+// 전시된 상품
+.list-drinkBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-item {
+  position: relative;
+  overflow: hidden;
+  width: 94px;
+  padding: 9px 12px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.selected .btn-item {
+  outline: solid 3px #6327fe;
+}
+
+.sold-out .btn-item::before {
+  content: "품절";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("/svg/Sold-out.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: transparent;
+}
+
+.btn-item .name {
+  font-size: 10px;
+  line-height: 100%;
+  margin: 6px 0 6px;
+}
+
+.btn-price {
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  background-color: #6327fe;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50px;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+/* 자판기 끝 */
+
+/* 마이페이지 시작 */
 .myPage {
   display: flex;
   flex-direction: column;
@@ -100,11 +169,24 @@ body {
   padding: 25px 27px;
 }
 
+.myDrinks > h2 {
+  margin-bottom: 13px;
+  text-align: center;
+  font-weight: 700;
+}
+
 .list-myDrinks {
   height: 364px;
 }
 
-@media screen and (max-width: 992px) {
+.cont-totalMoney {
+  margin: 6px 0;
+  text-align: right;
+}
+
+/* 마이페이지 끝 */
+
+@media screen and (max-width: 768px) {
   .wrapper {
     max-width: 360px;
     background-color: #fff;
@@ -115,5 +197,9 @@ body {
   }
   .logo {
     width: 166px;
+  }
+  .cont-totalMoney {
+    margin-bottom: 18px;
+    text-align: right;
   }
 }
