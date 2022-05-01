@@ -1,0 +1,64 @@
+/* components */
+.wrapper {
+  width: 768px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.cont-money {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  line-height: 21px;
+  border-radius: 5px;
+  background-color: #eae8fe;
+  font-weight: 500;
+}
+
+.list-drinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 12px 12px;
+  background-color: #eae8fe;
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  overflow-y: scroll;
+}
+
+.list-drinks li {
+  margin-bottom: 6px;
+  padding: 8px;
+  width: 100%;
+  height: 46px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.list-drinks li:last-of-type {
+  margin-bottom: 0;
+}
+
+.list-drinks li img {
+  float: left;
+  margin-right: 10px;
+  width: 18px;
+  height: 33px;
+}
+
+.list-drinks .name {
+  float: left;
+  font-size: 9px;
+  line-height: 33px;
+}
+
+.list-drinks .count {
+  float: right;
+  width: 30px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 4px;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+button,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  font-size: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+}

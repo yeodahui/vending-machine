@@ -1,0 +1,230 @@
+/* import */
+@import "reset";
+@import "components";
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+/* settings */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.txt-ir {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.txt-hidden {
+  // 웹표준 지키는 용도의 텍스트만 입력
+  visibility: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* design */
+body {
+  background-color: #eae8fe;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.4rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 67px;
+}
+
+.machine,
+.myPage {
+  width: 360px;
+}
+
+/* 자판기 시작 */
+.machine {
+  background-color: #fff;
+  padding: 31px 27px 28px;
+  box-sizing: border-box;
+}
+
+// 전시된 상품
+.list-drinkBtns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 12px;
+}
+
+.btn-item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 9px 12px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btn-item.selected {
+  outline: solid 3px #6327fe;
+}
+
+.btn-item.sold-out::before {
+  content: "품절";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/svg/Sold-out.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: transparent;
+}
+
+.btn-item .img-cola {
+  width: 36px;
+}
+
+.btn-item .name {
+  font-size: 10px;
+  line-height: 100%;
+  margin: 6px 0 6px;
+}
+
+.btn-price {
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  background-color: #6327fe;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50px;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+// 자판기 버튼
+.controls {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "return return btn-return"
+    "insert insert btn-insert"
+    "drinks drinks btn-get";
+  gap: 12px;
+
+  button {
+    padding: 6px 5px 7px;
+    font-size: 13px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  }
+  .cont-money {
+    grid-area: return;
+
+    .txt-balance {
+      font-weight: normal;
+    }
+  }
+  .btn-return {
+    grid-area: btn-return;
+  }
+  .inp-insert {
+    grid-area: insert;
+    border: 1px solid #bdbdbd;
+    line-height: 19px;
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+  .btn-insert {
+    grid-area: btn-insert;
+  }
+  .list-drinks {
+    grid-area: drinks;
+    height: 106px;
+  }
+  .btn-get {
+    grid-area: btn-get;
+    background-color: #6327fe;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+/* 자판기 끝 */
+
+/* 마이페이지 시작 */
+.myPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// 소지금
+.myMoney {
+  background-color: #fff;
+  padding: 9px 27px;
+}
+
+// 획득한 음료
+.myDrinks {
+  background-color: #fff;
+  padding: 25px 27px;
+}
+
+.myDrinks > h2 {
+  margin-bottom: 13px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.list-myDrinks {
+  height: 364px;
+}
+
+.cont-totalMoney {
+  margin: 6px 0;
+  text-align: right;
+}
+
+/* 마이페이지 끝 */
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 360px;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header h1 {
+    margin-bottom: 18px;
+  }
+  .logo {
+    width: 166px;
+  }
+  .machine {
+    padding: 0 27px;
+  }
+  .myPage {
+    gap: 7px;
+  }
+  .cont-totalMoney {
+    margin-bottom: 18px;
+    text-align: right;
+  }
+}

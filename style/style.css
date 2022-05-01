@@ -1,0 +1,375 @@
+@charset "UTF-8";
+/* import */
+/* reset */
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+button,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  font-size: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+}
+
+/* components */
+.wrapper {
+  width: 768px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 18px;
+}
+
+.cont-money {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 6px 10px;
+  line-height: 21px;
+  border-radius: 5px;
+  background-color: #eae8fe;
+  font-weight: 500;
+}
+
+.list-drinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 12px;
+  background-color: #eae8fe;
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  overflow-y: scroll;
+}
+
+.list-drinks li {
+  margin-bottom: 6px;
+  padding: 8px;
+  width: 100%;
+  height: 46px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.list-drinks li:last-of-type {
+  margin-bottom: 0;
+}
+
+.list-drinks li img {
+  float: left;
+  margin-right: 10px;
+  width: 18px;
+  height: 33px;
+}
+
+.list-drinks .name {
+  float: left;
+  font-size: 9px;
+  line-height: 33px;
+}
+
+.list-drinks .count {
+  float: right;
+  width: 30px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 4px;
+  text-align: center;
+}
+
+/* settings */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.txt-ir {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.txt-hidden {
+  visibility: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* design */
+body {
+  background-color: #eae8fe;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.4rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 67px;
+}
+
+.machine,
+.myPage {
+  width: 360px;
+}
+
+/* 자판기 시작 */
+.machine {
+  background-color: #fff;
+  padding: 31px 27px 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.list-drinkBtns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 12px;
+}
+
+.btn-item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 9px 12px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btn-item.selected {
+  outline: solid 3px #6327fe;
+}
+
+.btn-item.sold-out::before {
+  content: "품절";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/svg/Sold-out.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: transparent;
+}
+
+.btn-item .img-cola {
+  width: 36px;
+}
+
+.btn-item .name {
+  font-size: 10px;
+  line-height: 100%;
+  margin: 6px 0 6px;
+}
+
+.btn-price {
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  background-color: #6327fe;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50px;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+.controls {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+      grid-template-areas: "return return btn-return" "insert insert btn-insert" "drinks drinks btn-get";
+  gap: 12px;
+}
+
+.controls button {
+  padding: 6px 5px 7px;
+  font-size: 13px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.controls .cont-money {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: return;
+}
+
+.controls .cont-money .txt-balance {
+  font-weight: normal;
+}
+
+.controls .btn-return {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: btn-return;
+}
+
+.controls .inp-insert {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: insert;
+  border: 1px solid #bdbdbd;
+  line-height: 19px;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.controls .btn-insert {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: btn-insert;
+}
+
+.controls .list-drinks {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: drinks;
+  height: 106px;
+}
+
+.controls .btn-get {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: btn-get;
+  background-color: #6327fe;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* 자판기 끝 */
+/* 마이페이지 시작 */
+.myPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.myMoney {
+  background-color: #fff;
+  padding: 9px 27px;
+}
+
+.myDrinks {
+  background-color: #fff;
+  padding: 25px 27px;
+}
+
+.myDrinks > h2 {
+  margin-bottom: 13px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.list-myDrinks {
+  height: 364px;
+}
+
+.cont-totalMoney {
+  margin: 6px 0;
+  text-align: right;
+}
+
+/* 마이페이지 끝 */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 360px;
+    background-color: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .header h1 {
+    margin-bottom: 18px;
+  }
+  .logo {
+    width: 166px;
+  }
+  .machine {
+    padding: 0 27px;
+  }
+  .myPage {
+    gap: 7px;
+  }
+  .cont-totalMoney {
+    margin-bottom: 18px;
+    text-align: right;
+  }
+}
+/*# sourceMappingURL=style.css.map */
